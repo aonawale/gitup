@@ -1,0 +1,26 @@
+{
+  "name": "git-api-consumer",
+  "version": "1.0.0",
+  "description": "consuming GitHub's API",
+  "main": "karma.conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andela-aonawale/git-api-consumer.git"
+  },
+  "keywords": [
+    "github's",
+    "consumer"
+  ],
+  "author": "Ahmed Onawale",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-aonawale/git-api-consumer/issues"
+  },
+  "homepage": "https://github.com/andela-aonawale/git-api-consumer"
+}

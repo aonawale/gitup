@@ -1,0 +1,30 @@
+{
+  "name": "git-api-consumer",
+  "version": "1.0.0",
+  "description": "github consumer",
+  "main": "karma.conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher-nonet": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andela-aonawale/git-api-consumer.git"
+  },
+  "author": "Ahmed Onawale",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-aonawale/git-api-consumer/issues"
+  },
+  "homepage": "https://github.com/andela-aonawale/git-api-consumer"
+}

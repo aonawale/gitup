@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="GitUp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>GitUp App</title>
+    <link type="text/css" rel="stylesheet" href="libs/angular-material/angular-material.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/stylesheet.css">
+</head>
+<body ng-controller="SearchController as SearchCtrl">
+
+<div layout="column" layout-fill>
+<section layout="row" flex>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia">
+            <md-toolbar>
+                <h1 class="md-toolbar-tools">Git Up</h1>
+            </md-toolbar>
+            <md-content class="md-padding" ng-controller="LeftCtrl">
+                <p>sidebar content</p>
+            </md-content>
+        </md-sidenav>
+
+    <md-content flex>
+        <md-toolbar >
+            <div layout-align="center end" class="md-toolbar-tools">
+                <img class="toolbar-img" src="./assets/img/search_white_48dp.png"/>
+                <form name="searchForm" ng-submit="SearchCtrl.getUserData()">
+                    <md-input-container class="toolbar-input">
+                        <input ng-model="SearchCtrl.query">
+                    </md-input-container>
+                </form>
+            </div>
+        </md-toolbar>
+
+        <search-result ng-show="SearchCtrl.hide"></search-result>
+
+    </md-content>
+</section>
+</div>
+
+
+<script src="libs/angular/angular.js"></script>
+<script src="libs/angular-animate/angular-animate.js"></script>
+<script src="libs/angular-aria/angular-aria.js"></script>
+<script src="libs/angular-material/angular-material.js"></script>
+<script src="libs/angular-route/angular-route.js"></script>
+<script src="app/app.js"></script>
+<script src="app/githubuser/git.consumer.module.js"></script>
+<script src="app/githubuser/controllers/user.data.controller.js"></script>
+<script src="app/githubuser/services/git.consumer.service.js"></script>
+<script src="app/githubuser/directives/search.result.directive.js"></script>
+</body>
+</html>

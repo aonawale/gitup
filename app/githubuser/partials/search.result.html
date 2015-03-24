@@ -1,0 +1,81 @@
+<md-content flex class="md-padding" xmlns="http://www.w3.org/1999/html">
+<div layout="column" layout-fill layout-align="center center">
+    <md-card class="card" layout="row">
+        <div layout="column" layout-align="center start" class="pic-container">
+            <img class="user-pic" ng-src="{{SearchCtrl.user.avatar_url}}"/>
+        </div>
+        <div class="profile-container" layout="column" layout-align="start start">
+            <h1>{{SearchCtrl.user.name}}</h1>
+            
+            <div class="other-details">
+                <div>
+                    <md-icon md-svg-src="./assets/img/ic_timer_auto_24px.svg"></md-icon>
+                    <span>{{SearchCtrl.user.login}}</span>
+                </div>
+
+                <div>
+                    <md-icon md-svg-src="./assets/img/mail_24px.svg"></md-icon>
+                    <a ng-href="{{SearchCtrl.user.email}}" target="_top">{{SearchCtrl.user.email}}</a>
+                </div>
+
+                <div>
+                    <md-icon md-svg-src="./assets/img/location_on_24px.svg"></md-icon>
+                    <span>{{SearchCtrl.user.location}}</span>
+                </div>
+                <div>
+                    <md-icon md-svg-src="./assets/img/timer_24px.svg"></md-icon>
+                    <span>Joined on {{SearchCtrl.user.created_at | date: 'medium' | limitTo: 13}}</span>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="column">
+                    <md-button ng-href="https://github.com/{{SearchCtrl.user.login}}/followers" target="_blank">
+                    <span class="follow">{{SearchCtrl.user.followers.length}}</span>
+                    <span class="follow-text">followers</span>
+                    </md-button>
+                </div>
+
+                <div layout="column">
+                    <md-button ng-href="https://github.com/{{SearchCtrl.user.login}}/following" target="_blank">
+                    <span class="follow">{{SearchCtrl.user.following.length}}</span>
+                    <span class="follow-text">following</span>
+                    </md-button>
+                </div>
+                </div>
+        </div>
+    </md-card>
+    <md-tabs>
+        <md-tab label="Bio">
+
+        </md-tab>
+        <md-tab label="Repositories">
+            <md-content>
+                <md-list>
+                    <md-item ng-repeat="repo in SearchCtrl.user.repos">
+                        <md-item-content>
+                        <md-button class="md-primary" ng-href="https://github.com/{{SearchCtrl.user.login}}/{{repo.name}}" target="_blank">{{repo.name}}</md-button>
+                        </md-item-content>
+                    </md-item>
+                </md-list>
+            </md-content>
+        </md-tab>
+        <md-tab label="Followers">
+            <md-grid-list md-cols-gt-md="7" md-row-height="128px" md-gutter="4px">
+                <md-grid-tile ng-repeat="fellow in SearchCtrl.user.followers">
+                    <img ng-src="{{fellow.avatar_url}}" ng-href="{{fellow.html_url}}">
+                    <md-tooltip md-direction="bottom">{{fellow.login}}</md-tooltip></md-grid-tile>
+
+            </md-grid-list>
+        </md-tab>
+        <md-tab label="Following">
+            <md-grid-list md-cols-gt-md="7" md-row-height="128px" md-gutter="4px">
+                <md-grid-tile ng-repeat="fellow in SearchCtrl.user.following">
+                    <img ng-src="{{fellow.avatar_url}}" ng-href="{{fellow.html_url}}">
+                    <md-tooltip md-direction="bottom">{{fellow.login}}</md-tooltip></md-grid-tile>
+
+            </md-grid-list>
+        </md-tab>
+    </md-tabs>
+</div>
+</md-content>
