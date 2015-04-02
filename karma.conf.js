@@ -15,7 +15,20 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/*.js'
+      './libs/angular/angular.js',
+      './libs/angular-mocks/angular-mocks.js',
+      './libs/angular-route/angular-route.js',
+      './libs/ngstorage/ngStorage.js',
+      './libs/angular-material/angular-material.js',
+      './libs/angular-animate/angular-animate.js',
+      './libs/angular-aria/angular-aria.js',
+      './app/app.js',
+      './app/githubuser/git.consumer.module.js',
+      './app/githubuser/controllers/user.data.controller.js',
+      './app/githubuser/controllers/side.bar.controller.js',
+      './app/githubuser/controllers/user.profile.controller.js',
+      './app/githubuser/services/git.consumer.service.js',
+      './tests/user.data.controller.test.js'
     ],
 
 

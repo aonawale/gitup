@@ -1,0 +1,36 @@
+<md-card>
+<md-card-content>
+  <form>
+    <md-input-container>
+      <label>Name</label>
+      <input type="text" ng-model="update.name">
+    </md-input-container>
+    <md-input-container>
+      <label>Email</label>
+      <input type="text" ng-model="update.email">
+    </md-input-container>
+    <md-input-container>
+      <label>Location</label>
+      <input type="text" ng-model="update.location">
+    </md-input-container>
+    <md-input-container>
+      <label>Company</label>
+      <input type="text" ng-model="update.company">
+    </md-input-container>
+    <md-input-container>
+      <label>Blog</label>
+      <input type="text" ng-model="update.blog">
+    </md-input-container>
+    <md-input-container>
+      <label>Bio</label>
+      <textarea ng-model="update.bio"></textarea>
+    </md-input-container>
+    <md-content layout="row">
+      <md-switch ng-model="update.hire" aria-label="Hireable?">
+        Hireable ?
+      </md-switch>
+      <md-button ng-click="updateProfile()" class="md-primary md-raised" type="submit">Update Profile</md-button>
+    </md-content>
+  </form>
+  </md-card-content>
+</md-card>

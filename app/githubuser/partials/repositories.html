@@ -1,0 +1,20 @@
+<md-card flex>
+	<md-card-content layout="row">
+		<md-content flex="80"><h4>found {{$root.repositories.length}} repositories with "{{$root.query}}"</h4></md-content>
+		<md-content flex="20"><h4>Sort</h4></md-content>
+	</md-card-content>
+
+	<md-card-content layout="row" layout-align="center center" flex ng-repeat="repo in $root.repositories | orderBy : repo.owner.login">
+		<md-content class="md-padding" flex="10">{{$index+1}}.</md-content>
+		<md-button ng-href="https://github.com/{{repo.owner.login}}/{{repo.name}}" target="_blank" class="md-padding" flex="30">
+		 {{repo.name}}
+		 </md-button>
+		<md-button ng-href="{{repo.owner.html_url}}" target="_blank" class="md-padding" flex="30">
+			{{repo.owner.login}}
+		</md-button>
+		<md-content class="md-padding" flex="30">
+			<img ng-src="{{repo.owner.avatar_url}}" class="face" flex alt="{{repo.full_name}}">
+		</md-content>
+		<!--<md-divider></md-divider>-->
+	</md-card-content>
+</md-card>

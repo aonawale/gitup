@@ -5,62 +5,75 @@ h4,
 h5,
 h6
 {
-    font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    line-height: 0.0;
+  font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  line-height: 0.0;
 }
 .toolbar-img{
-    height: 30px;
-    width: 30px;
-    margin: 0 0 -10px 20px;
+  height: 30px;
+  width: 30px;
+  margin: 0 0 -10px 20px;
 }
 .toolbar-input{
-    width: 300px;
-    margin: 30px 0 0 0 ;
+  width: 300px;
+  margin: 30px 0 0 0 ;
 }
 .card{
-    width: 950px;
-    height: 270px;
+  width: 950px;
+  height: 270px;
 }
 .user-pic{
-    height: 270px;
-    width: 270px;
+  height: 270px;
+  width: 270px;
 }
 .pic-contaner{
-    float: left;
-    height: auto;
-    width: 470px;
-    margin: 0 0 0 15px;
+  float: left;
+  height: auto;
+  width: 470px;
+  margin: 0 0 0 15px;
 }
 .profile-container{
-    float: right;
-    height: auto;
-    width: 470px;
-    margin: 0 0 0 30px;
+  float: right;
+  height: auto;
+  width: 470px;
+  margin: 0 0 0 30px;
 }
 .login{
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 24px;
-    color: #666;
-    text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+  text-overflow: ellipsis;
 }
 .other-details{
-    margin: 10px 0 0 0;
-    line-height: 1.9;
+  margin: 10px 0 0 0;
+  line-height: 1.9;
 }
 .follow{
-    margin: 10px 50px 0 10px;
-    font-size: 34px;
-    font-weight: bold;
-    display: block;
+  margin: 10px 50px 0 10px;
+  font-size: 34px;
+  font-weight: bold;
+  display: block;
 }
 .follow-text{
-    font-size: 13px;
-    color: blue;
+  font-size: 13px;
+  color: blue;
+}
+.title{
+  margin-left: 30px;
+}
+.error{
+  font-size: 40px;
+  margin-top: 200px;
+}
+.face{
+  width: 70px;
+  height: 70px;
+  border: 1px solid #fff;
+  border-radius: 100%;
 }
 
