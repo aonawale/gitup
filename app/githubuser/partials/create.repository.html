@@ -1,0 +1,19 @@
+<md-dialog>
+  <md-content>
+    <md-input-container>
+	    <label>Create a new Repository</label>
+	    <input type="text" ng-model="ctrl.parent.newRepo.name">
+	  </md-input-container>
+	<md-content layout="row">
+	<md-switch ng-model="ctrl.parent.newRepo.init" ng-true-value="true">
+  Auto_init ?
+	</md-switch>
+	<md-switch ng-model="ctrl.parent.newRepo.private" ng-true-value="true">
+  Private ?
+	</md-switch>
+	</md-content>
+		<md-button layout-fill layout-align="end center" class="md-primary md-raised" ng-click="ctrl.parent.createRepo()">
+		Create
+		</md-button>
+	</md-content>
+</md-dialog>

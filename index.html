@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html ng-app="GitUp">
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>GitUp App</title>
-    <link type="text/css" rel="stylesheet" href="libs/angular-material/angular-material.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/stylesheet.css">
+<meta charset="UTF-8">
+<title>GitUp App</title>
+<link type="text/css" rel="stylesheet" href="libs/angular-material/angular-material.css">
+<link type="text/css" rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
 <body ng-controller="SearchController as SearchCtrl">
 
 <div layout="column" layout-fill>
 <section layout="row" flex>
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia">
-            <md-toolbar>
-                <h1 class="md-toolbar-tools">Git Up</h1>
-            </md-toolbar>
-            <md-content class="md-padding" ng-controller="LeftCtrl">
-                <p>sidebar content</p>
-            </md-content>
-        </md-sidenav>
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia">
+<md-toolbar>
+<h1 class="title">Git Up</h1>
+</md-toolbar>
+<md-content class="md-padding" ng-controller="SideBarController">
+<md-divider></md-divider>
+<md-button ng-click="authenticate()">Authenticate GitHub</md-button>
+<md-divider></md-divider>
+<md-button ng-click="signIn()">Sign in with GitHub</md-button>
+<md-divider></md-divider>
+<md-button ng-click="editProfile()">Edit profile</md-button>
+<md-divider></md-divider>
+<md-button ng-click="showAddDialog()">Create repository</md-button>
+<md-divider></md-divider>
+</md-content>
+</md-sidenav>
 
-    <md-content flex>
-        <md-toolbar >
-            <div layout-align="center end" class="md-toolbar-tools">
-                <img class="toolbar-img" src="./assets/img/search_white_48dp.png"/>
-                <form name="searchForm" ng-submit="SearchCtrl.getUserData()">
-                    <md-input-container class="toolbar-input">
-                        <input ng-model="SearchCtrl.query">
-                    </md-input-container>
-                </form>
-            </div>
-        </md-toolbar>
+<md-content flex>
+<md-toolbar>
+<div layout="row" layout-align="center end" class="md-toolbar-tools">
+<img class="toolbar-img" src="./assets/img/search_white_48dp.png"/>
+<md-input-container class="toolbar-input">
+<input ng-model="SearchCtrl.query">
+</md-input-container>
+<md-button class="md-primary md-raised" ng-click="SearchCtrl.getUserData(SearchCtrl.query)">User</md-button>
+<md-button class="md-primary md-raised" ng-click="SearchCtrl.getRepositories(SearchCtrl.query)">
+Repositories</md-button>
+</div>
+</md-toolbar>
 
-        <search-result ng-show="SearchCtrl.hide"></search-result>
+<section ng-view>
+</section>
 
-    </md-content>
+</md-content>
 </section>
 </div>
-
 
 <script src="libs/angular/angular.js"></script>
 <script src="libs/angular-animate/angular-animate.js"></script>
 <script src="libs/angular-aria/angular-aria.js"></script>
 <script src="libs/angular-material/angular-material.js"></script>
 <script src="libs/angular-route/angular-route.js"></script>
+<script src="libs/ngstorage/ngStorage.js"></script>
 <script src="app/app.js"></script>
 <script src="app/githubuser/git.consumer.module.js"></script>
+<script src='app/githubuser/controllers/side.bar.controller.js'></script>
 <script src="app/githubuser/controllers/user.data.controller.js"></script>
+<script src="app/githubuser/controllers/user.profile.controller.js"></script>
+<script src="app/githubuser/controllers/repositories.js"></script>
+<script src="app/githubuser/controllers/error.page.controller.js"></script>
 <script src="app/githubuser/services/git.consumer.service.js"></script>
-<script src="app/githubuser/directives/search.result.directive.js"></script>
-<script src="libs/satellizer/satellizer.js"></script>
+
 </body>
 </html>
