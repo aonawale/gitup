@@ -28,7 +28,7 @@ angular.module('GitUp', ['ngMaterial', 'ngRoute', 'ngStorage', 'UserDataModule']
       controller: 'ErrorPageController',
       controllerAs: 'ErrorPageCtrl'
     })
-    // default route
+    // default route....
     .otherwise({
       redirectTo: ''
     });
