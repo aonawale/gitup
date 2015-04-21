@@ -67,7 +67,7 @@ angular.module('UserDataModule')
       		controllerAs: 'ctrl',
       		controller: angular.noop,
       			locals: {parent: $scope},
-          templateUrl: '/app/githubuser/partials/create.repository.html',
+          templateUrl: '/gitup/app/githubuser/partials/create.repository.html',
           targetEvent: ev
 
       });
