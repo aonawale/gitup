@@ -6,25 +6,25 @@ angular.module('GitUp', ['ngMaterial', 'ngRoute', 'ngStorage', 'UserDataModule']
   // Define routes for the application
       // route for user profile
     .when('/search/user', {
-      templateUrl: '/app/githubuser/partials/search.result.html',
+      templateUrl: '/gitup/app/githubuser/partials/search.result.html',
       controller: 'UserProfileController',
       controllerAs: 'UserProfileCtrl'
     })
     // route for repositories
     .when('/search/repositories', {
-      templateUrl: '/app/githubuser/partials/repositories.html',
+      templateUrl: '/gitup/app/githubuser/partials/repositories.html',
       controller: 'RepositoriesController',
       controllerAs: 'RepositoriesCtrl'
     })
     // route for edit profile
     .when('/user/update_profile', {
-      templateUrl: '/app/githubuser/partials/update.profile.html',
+      templateUrl: '/gitup/app/githubuser/partials/update.profile.html',
       controller: 'SideBarController'
       //controllerAs: 'SideBarCtrl'
     })
     // route for error 404 page
     .when('/search/404', {
-      templateUrl: '/app/githubuser/partials/error.page.html',
+      templateUrl: '/gitup/app/githubuser/partials/error.page.html',
       controller: 'ErrorPageController',
       controllerAs: 'ErrorPageCtrl'
     })
